@@ -4,14 +4,18 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
 	print(app)
-	return "hi"
+	return render_template("form.html")
 
 @app.route("/auth")
 def authenticate():
 	print(app)
 	print(request)
 	print(request.args)
-	return "WAAA"
+	print(request.args["username"])
+	print(request.method)
+	return render_template("greeting.html",
+							name = request.args['username'],
+							method = request.method)
 
 if __name__ == "__main__":
 	app.debug = True
