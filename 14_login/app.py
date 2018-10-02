@@ -47,9 +47,11 @@ def authorization():
 
 @app.route("/logout")
 def logout():
+	# removes stored data
 	session.pop("username")
 	session.pop("password")
 	session.pop("attempted")
+	
 	return redirect(url_for("home"))
 
 if __name__ == "__main__":
