@@ -1,5 +1,5 @@
-# Frozen Cookies - T. Fabiha && Stefan Tan
-#SoftDev1 pd<p>
+#Frozen Cookies - T. Fabiha && Stefan Tan
+#SoftDev1 pd6
 #K14 -- Do I know you?
 #2018-10-02
 
@@ -51,7 +51,7 @@ def logout():
 	session.pop("username")
 	session.pop("password")
 	session.pop("attempted")
-	
+
 	return redirect(url_for("home"))
 
 if __name__ == "__main__":
