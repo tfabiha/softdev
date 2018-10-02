@@ -5,10 +5,23 @@
 	</head>
 
 	<body>
-		<form action="/auth">
-			Username: <input type = "text" name = "username">
-			Password: <input type = "text" name = "password">
-			<input type = "submit" name = "Submit">
-		</form>
+
+		{% if logged %}
+			<p>Hello there! Welcome {{name}}!</p>
+			<form action="/logout">
+				<input type = "submit" value = "Logout">
+			</form>
+
+		{% else %}
+
+			<p> {{error}} </p>
+
+			<form action="/auth">
+				<p> Username: <input type = "text" name = "username"> </p>
+				<p> Password: <input type = "text" name = "password"> </p>
+				<input type = "submit" value = "Submit">
+			</form>
+		{% endif %}
+
 	</body>
 </html>
