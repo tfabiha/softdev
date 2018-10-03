@@ -1,0 +1,42 @@
+<!--
+Frozen Cookies - T. Fabiha && Stefan Tan
+SoftDev1 pd6
+K15 -- Oh yes, perhaps I do…
+2018-10-02
+-->
+
+{% extends "base.html" %}
+
+{% block head %}
+    <title> Home </title>
+{% endblock %}
+
+{% block content %}
+
+    {% if logged %}
+    <p>Hello there! Welcome {{name}}!</p>
+    <form action="/logout">
+      <input type = "submit" value = "Logout">
+    </form>
+
+    {% else %}
+
+    <!-- Prints errors if any exist. -->
+    {# <p> {{error}} </p> #}
+    {% set msgs = get_flashed_messages() %}
+
+    {% for each in msgs %}
+      {{each}}
+      <br>
+    {% endfor %}
+
+    <!-- Asks for username and password for login. -->
+    <form action="/auth">
+      <p>Please enter your username and password below:</p>
+      <p> Username: <input type = "text" name = "username"> </p>
+      <p> Password: <input type = "text" name = "password"> </p>
+      <input type = "submit" value = "Submit">
+    </form>
+    {% endif %}
+
+{% endblock %}
