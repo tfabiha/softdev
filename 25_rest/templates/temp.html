@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Climate Data</title>
+  </head>
+
+  <body>
+    <h1>Data from Climate Data API:</h1>
+    <p>Gas emission scenario: {{scen}}</p>
+    <p>GMC: {{g}}</p>
+    <p>Calculated variable: {{variable}}</p>
+    <p>From: {{f}} | To: {{e}}</p>
+
+    <br>
+
+    <p>The following are the calculations for the months:<p>
+    <ol>
+      {% for i in months %}
+
+      <li>{{i}}{{s}}</li>
+
+      {% endfor %}
+    </ol>
+  </body>
+
+</html>
