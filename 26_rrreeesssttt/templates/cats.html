@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Cat Pictures API</title>
+  </head>
+
+  <body>
+    <h3>Enjoy these random cats</h3>
+    <br>
+    {% for cat in kitty %}
+      <img src={{cat}} style="width: 200px; height: 200px">
+      <br>
+    {% endfor %}
+
+    <br>
+    <a href="/">Go back home.</a>
+  </body>
+
+</html>
