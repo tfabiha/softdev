@@ -11,7 +11,7 @@ var fibonacci = function(n)
   }
   else
   {
-    return fib(n - 1) + fib(n - 2);
+    return fibonacci(n - 1) + fib(n - 2);
   }
 }
 
