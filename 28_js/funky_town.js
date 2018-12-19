@@ -1,4 +1,4 @@
-// ENDGAME
+// ENDGAME - Michelle Tang, T Fabiha
 // SoftDev1 pd6
 // K28 -- Sequential Progression
 // 2018-12-18
