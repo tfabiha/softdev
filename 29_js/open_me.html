@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HTML file for JavaScript work 00 -->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>JS work the first</title>
+    <script src="funky_town.js"></script>
+	
+  </head>
+  <body>
+    <H1>OPEN UP YOUR DEV CONSOLE AND RUN YOUR JS FUNCTIONS!!!</H1>
+    <h3>(Ctrl-Shift-J in Chrome)</h3>
+    <h3>(Ctrl-Shift-K in Firefox)</h3>
+	<br>
+	<br>
+	<br>
+    <h3>Web console will show the result of following code:</h3>
+
+    <h3> 8th fibonacci number: <button id="a"> click me! </button> </h3>
+    <h3> gcd of 12 and 8: <button id="b"> click me! </button> </h3>
+    <h3> random student: <button id="c"> click me! </button> </h3>
+
+    <script type="text/javascript">
+      var fib = document.getElementById("a");
+      fib.addEventListener("click", fibFunc);
+
+      var g = document.getElementById("b");
+      g.addEventListener("click", gcdFunc);
+      
+      var randStu = document.getElementById("c");
+      randStu.addEventListener("click", randStuFunc);
+
+    </script>
+
+
+  </body>
+  <footer>       
+    
+  </footer>
+</html>
