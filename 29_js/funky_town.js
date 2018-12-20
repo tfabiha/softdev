@@ -18,14 +18,14 @@ var fibonacci = function(n)
 var gcd = function (a, b){
     current_gcd = 1;
     i = 1;
-    
+
     while (i <= a && i <= b){
 	if (a%i == 0 && b%i ==0){
 	    current_gcd = i;
 	}
 	i++;
     }
-    
+
     return current_gcd;
 };
 
